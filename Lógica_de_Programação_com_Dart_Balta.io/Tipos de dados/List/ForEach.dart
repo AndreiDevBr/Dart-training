@@ -21,8 +21,8 @@ void main() {
       Salarios[4] +
       Salarios[5];
   print(totalDeSalariosAnual.toStringAsFixed(2));
-
-  var salarioAnual = List.generate(12, (index) => 1000 * (index + 1));
+//
+  var salarioAnual = List.generate(12, (index) => 1 * (index + 1));
   var totalSalarios = 0;
 
   salarioAnual.forEach((element) {
