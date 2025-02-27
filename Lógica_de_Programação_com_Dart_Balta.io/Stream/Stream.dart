@@ -1,14 +1,15 @@
 import 'dart:async';
+import "dart:io";
 
 void main() async {
-  final value = await futureFunction();
+  final value = await streamFunction();
   print(value);
   streamFunction().listen((event) {
     print("LETTER: $event");
   });
   final valueStream = Stream.value("TESTE");
   valueStream.listen((event) {
-    print(event);
+   // print(event);
   });
 }
 
@@ -18,4 +19,13 @@ Stream<String> streamFunction() async* {
   for (var item in list) {
     yield item;
   }
+}
+
+Future<String> streamFunction2() async {
+  final word = "Andrei Future";
+  final list = word.split("");
+  for (var item in list) {
+    return item;
+  }
+  return word;
 }
