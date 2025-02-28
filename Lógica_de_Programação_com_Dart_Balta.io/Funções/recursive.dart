@@ -1,8 +1,7 @@
 void main() {
   //print(5);
-  final list = ["Fluter","Dart", "Hemrique", "Mobilidade"];
+  final list = ["Fluter", "Dart", "Hemrique", "Mobilidade"];
   print(searchIndex(list, "Amdrei"));
-
 }
 
 factorial(int n) {
@@ -12,13 +11,10 @@ factorial(int n) {
   return n * factorial(n - 1);
 }
 
-List? searchIndex(List<String> list, String object, [int? Index]) {
-  final currentIndex = Index ?? 0;
-
-  if (list[currentIndex] == object ){
-      return currentIndex
-
-  } else if ( currentIndex == list.length);
-
-  }
- 
+int searchIndex(List<String> list, String object, [int? index]) {
+  final currentIndex = index ?? 0;
+  if (currentIndex == list.length) {
+    return -1;
+  } else if (currentIndex == list.length) ;
+  return searchIndex(list, object, (currentIndex + 1));
+}
