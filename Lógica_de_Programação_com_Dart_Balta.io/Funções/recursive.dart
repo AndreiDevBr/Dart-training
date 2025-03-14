@@ -1,5 +1,5 @@
 void main() {
-  //print(5);
+  print(5);
   final list = ["Fluter", "Dart", "Hemrique", "Mobilidade"];
   print(searchIndex(list, "Amdrei"));
 }
